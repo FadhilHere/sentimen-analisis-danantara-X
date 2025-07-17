@@ -33,20 +33,20 @@ st.header("📊 Visualisasi Data Sentimen")
 
 st.subheader("Distribusi Sentimen Sebelum Preprocessing")
 bar_sebelum = Image.open("bar_sebelum.png")
-st.image(bar_sebelum, use_column_width=True)
+st.image(bar_sebelum, use_container_width=True)
 
 st.subheader("Distribusi Sentimen Sesudah Preprocessing")
 bar_sesudah = Image.open("bar_sesudah.png")
-st.image(bar_sesudah, use_column_width=True)
+st.image(bar_sesudah, use_container_width=True)
 
 st.subheader("Wordcloud Sentimen Positif")
 wordcloud_positif = Image.open("wordcloud_positif.png")
-st.image(wordcloud_positif, use_column_width=True)
+st.image(wordcloud_positif, use_container_width=True)
 
 st.subheader("Wordcloud Sentimen Netral")
 wordcloud_netral = Image.open("wordcloud_netral.png")
-st.image(wordcloud_netral, use_column_width=True)
+st.image(wordcloud_netral, use_container_width=True)
 
 st.subheader("Wordcloud Sentimen Negatif")
 wordcloud_negatif = Image.open("wordcloud_negatif.png")
-st.image(wordcloud_negatif, use_column_width=True)
+st.image(wordcloud_negatif, use_container_width=True)
