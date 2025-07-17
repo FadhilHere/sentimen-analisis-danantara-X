@@ -54,7 +54,7 @@ Proses ini membantu dalam mengurangi noise dan memperjelas makna dalam data sebe
 
 # Visualisasi
 st.markdown("---")
-st.header("📊 Visualisasi Data Sentimen")
+st.header("Visualisasi Data Sentimen")
 
 st.subheader("Distribusi Sentimen Sebelum Preprocessing")
 bar_sebelum = Image.open("bar_sebelum.png")
