@@ -8,14 +8,14 @@ model = joblib.load("model_svm.pkl")
 vectorizer = joblib.load("vectorizer.pkl")
 
 # Judul utama
-st.title("Analisis Sentimen terhadap Pembentukan Danantara pada Media Sosial X")
+st.title("Analisis Sentimen terhadap Pembentukan Danantara pada Media Sosial X menggunakan Algoritma Naive Bayes dan Support Vector Machine")
 st.markdown("### Menggunakan Algoritma Support Vector Machine (SVM)")
 
 st.markdown("""
 Media sosial kini menjadi wadah utama bagi masyarakat dalam menyampaikan opini, termasuk mengenai program atau kebijakan baru seperti pembentukan Danantara.  
 Pada analisis ini, kami menggunakan dua algoritma machine learning, yaitu:
 
-- **Support Vector Machine (SVM)**, dan  
+- **Support Vector Machine (SVM)** 
 - **Naive Bayes**  
 
 untuk mengklasifikasikan sentimen masyarakat berdasarkan data yang diperoleh dari media sosial **X (Twitter)**.
@@ -25,9 +25,21 @@ Data dikumpulkan menggunakan **Tweet Harvester**, sebuah tools scraping data dar
 Untuk meningkatkan akurasi model, kami juga melakukan **tuning hyperparameter** menggunakan metode **GridSearchCV**.
 """)
 
+st.markdown("""
+Untuk mengevaluasi performa dari kedua algoritma yang digunakan, yaitu **Support Vector Machine (SVM)** dan **Naive Bayes**, kami membandingkan metrik akurasi, presisi, recall, dan f1-score dari masing-masing model.  
+
+Hasil evaluasi ditampilkan pada gambar berikut:
+""")
+
+st.image("perbandingan_model.png", caption="Perbandingan performa model SVM dan Naive Bayes", use_column_width=True)
+
+st.markdown("""
+Dari hasil evaluasi tersebut, dapat dilihat bahwa **SVM memiliki performa yang lebih baik dibandingkan Naive Bayes**, terutama pada metrik f1-score yang menunjukkan keseimbangan antara presisi dan recall.  
+Oleh karena itu, pada sistem ini kami menggunakan **SVM sebagai model utama** untuk mengklasifikasikan sentimen masyarakat terhadap topik Danantara.
+""")
 
 # Penjelasan Text Preprocessing
-st.markdown("###Tahapan Text Preprocessing")
+st.markdown("### Tahapan Text Preprocessing")
 st.markdown("""
 Sebelum dilakukan klasifikasi sentimen, data mentah dari Twitter diproses menggunakan beberapa tahapan preprocessing untuk meningkatkan kualitas analisis, yaitu:
 
