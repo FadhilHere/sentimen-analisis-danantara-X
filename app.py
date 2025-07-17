@@ -8,19 +8,26 @@ model = joblib.load("model_svm.pkl")
 vectorizer = joblib.load("vectorizer.pkl")
 
 # Judul utama
-st.title("📘 Analisis Sentimen terhadap Pembentukan Danantara pada Media Sosial X")
+st.title("Analisis Sentimen terhadap Pembentukan Danantara pada Media Sosial X")
 st.markdown("### Menggunakan Algoritma Support Vector Machine (SVM)")
 
-# Deskripsi awal
 st.markdown("""
-Media sosial kini menjadi wadah utama bagi masyarakat dalam menyampaikan opini, termasuk mengenai program atau kebijakan baru seperti pembentukan Danantara. 
-Pada analisis ini, kami menggunakan **algoritma Support Vector Machine (SVM)** untuk mengklasifikasikan sentimen masyarakat berdasarkan data yang diperoleh dari media sosial **X (Twitter)**.
+Media sosial kini menjadi wadah utama bagi masyarakat dalam menyampaikan opini, termasuk mengenai program atau kebijakan baru seperti pembentukan Danantara.  
+Pada analisis ini, kami menggunakan dua algoritma machine learning, yaitu:
 
-Data dikumpulkan menggunakan **Tweet Harvester**, sebuah tools scraping data dari Twitter, yang berhasil menghimpun sebanyak **58.893 baris tweet** dari kata kunci relevan.
+- **Support Vector Machine (SVM)**, dan  
+- **Naive Bayes**  
+
+untuk mengklasifikasikan sentimen masyarakat berdasarkan data yang diperoleh dari media sosial **X (Twitter)**.
+
+Data dikumpulkan menggunakan **Tweet Harvester**, sebuah tools scraping data dari Twitter, yang berhasil menghimpun sebanyak **58.893 baris tweet** dari kata kunci relevan.  
+
+Untuk meningkatkan akurasi model, kami juga melakukan **tuning hyperparameter** menggunakan metode **GridSearchCV**.
 """)
 
+
 # Penjelasan Text Preprocessing
-st.markdown("### 🧹 Tahapan Text Preprocessing")
+st.markdown("###Tahapan Text Preprocessing")
 st.markdown("""
 Sebelum dilakukan klasifikasi sentimen, data mentah dari Twitter diproses menggunakan beberapa tahapan preprocessing untuk meningkatkan kualitas analisis, yaitu:
 
@@ -76,3 +83,6 @@ if st.button("Prediksi Sentimen"):
 
         st.subheader("Hasil Prediksi:")
         st.success(f"Komentar ini bersentimen: **{result}**")
+
+# Footer atau penutup
+st.info("Seluruh eksperimen dilakukan menggunakan dataset hasil scraping Twitter, dan implementasi dilakukan dengan Python + Scikit-Learn.")
