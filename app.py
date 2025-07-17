@@ -31,7 +31,7 @@ Untuk mengevaluasi performa dari kedua algoritma yang digunakan, yaitu **Support
 Hasil evaluasi ditampilkan pada gambar berikut:
 """)
 
-st.image("perbandingan_model.png", caption="Perbandingan performa model SVM dan Naive Bayes", use_column_width=True)
+st.image("perbandingan_model.png", caption="Perbandingan performa model SVM dan Naive Bayes", use_container_width=True)
 
 st.markdown("""
 Dari hasil evaluasi tersebut, dapat dilihat bahwa **SVM memiliki performa yang lebih baik dibandingkan Naive Bayes**, terutama pada metrik f1-score yang menunjukkan keseimbangan antara presisi dan recall.  
