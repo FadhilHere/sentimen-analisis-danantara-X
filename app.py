@@ -22,8 +22,7 @@ if st.button("Prediksi Sentimen"):
         prediction = model.predict(text_vectorized)
 
         # Label sentimen
-        label_dict = {0: "Negatif", 1: "Netral", 2: "Positif"}
-        result = label_dict.get(prediction[0], "Tidak diketahui")
+        result = prediction[0].capitalize()
 
         st.subheader("Hasil Prediksi:")
         st.success(f"Komentar ini bersentimen: **{result}**")
