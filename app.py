@@ -1,13 +1,12 @@
 import streamlit as st
-import pickle
+import joblib
 import numpy as np
 
 # Load model dan vectorizer
-with open("model_svm.pkl", "rb") as f:
-    model = pickle.load(f)
 
-with open("vectorizer.pkl", "rb") as f:
-    vectorizer = pickle.load(f)
+# Load model dan vectorizer
+model = joblib.load("model_svm.pkl")
+vectorizer = joblib.load("vectorizer.pkl")
 
 st.title("Analisis Sentimen Komentar (SVM)")
 
