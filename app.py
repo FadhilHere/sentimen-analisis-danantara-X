@@ -56,11 +56,11 @@ Proses ini membantu dalam mengurangi noise dan memperjelas makna dalam data sebe
 st.markdown("---")
 st.header("Visualisasi Data Sentimen")
 
-st.subheader("Distribusi Sentimen Sebelum Preprocessing")
+st.subheader("Distribusi Sentimen Sebelum disahkan")
 bar_sebelum = Image.open("bar_sebelum.png")
 st.image(bar_sebelum, use_container_width=True)
 
-st.subheader("Distribusi Sentimen Sesudah Preprocessing")
+st.subheader("Distribusi Sentimen Sesudah disahkan")
 bar_sesudah = Image.open("bar_sesudah.png")
 st.image(bar_sesudah, use_container_width=True)
 
